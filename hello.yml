@@ -11,14 +11,4 @@ jobs:
   - get: sample-project
     trigger: false
   - task: say-hello-in-yavascript
-    config:
-      platform: linux
-      image_resource:
-        type: docker-image
-        source: {repository: node}
-      inputs:
-      - name: sample-project
-      run:
-        dir: sample-project
-        path: npm
-        args: ["start"]
+    file: sample-project/flight-tasks/hello-javascript.yml
