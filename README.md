@@ -23,9 +23,14 @@ Let's assume we're running locally for now:
    # fly -t lite trigger-job -j hello/hello-world
 ```
 
-Honestly though it's more fun to play with the subcommands since incrementally responding to the error output leads to a valid constructed command
+Honestly though it's more fun to play with the subcommands since incrementally responding to concourse error output leads to a valid constructed command
 
 
 ### Watching the fan spin
 
-Assuming [concourse-multi-image-sample-project](https://github.com/walrusfruitcake/concourse-multi-image-sample-project) isn't broken in a spectacular fashion, we should be able to trigger the build via `fly` or by clicking around in <http://192.168.100.4:8080>
+Assuming [concourse-multi-image-sample-project](https://github.com/walrusfruitcake/concourse-multi-image-sample-project)
+isn't broken in a spectacular fashion, we should be able to trigger the build
+via `fly` or by clicking around in <http://192.168.100.4:8080>
+
+Now we can go look at a failing task (`say-yay-in-python-36`),
+at least on recent `node`/`buildback-deps`/`*-ian` images

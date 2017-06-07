@@ -12,3 +12,5 @@ jobs:
     trigger: false
   - task: say-hello-in-yavascript
     file: sample-project/flight-tasks/hello-javascript.yml
+  - task: say-yay-in-python-36
+    file: sample-project/flight-tasks/hello-python-36.yml
