@@ -24,3 +24,8 @@ Let's assume we're running locally for now:
 ```
 
 Honestly though it's more fun to play with the subcommands since incrementally responding to the error output leads to a valid constructed command
+
+
+### Watching the fan spin
+
+Assuming [concourse-multi-image-sample-project](https://github.com/walrusfruitcake/concourse-multi-image-sample-project) isn't broken in a spectacular fashion, we should be able to trigger the build via `fly` or by clicking around in <http://192.168.100.4:8080>
