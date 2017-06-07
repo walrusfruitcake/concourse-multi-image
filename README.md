@@ -1,5 +1,4 @@
-
-### Getting a ceiling fan spinning
+### Mounting a fan to the ceiling
 
 Let's assume we're running locally for now:
 
@@ -16,7 +15,7 @@ Let's assume we're running locally for now:
 - download `fly` and somehow have it findable on your `PATH`, e.g. move to `/usr/local/bin`
 - add your concourse lol: `fly -t lite login -c http://192.168.100.4:8080`
 
-### Watching the fan spin
+### Getting the ceiling fan spinning
 
 ```sh
    # fly -t lite set-pipeline -p hello -c hello.yml
