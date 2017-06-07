@@ -5,8 +5,31 @@ resources:
     uri: https://github.com/walrusfruitcake/concourse-multi-image-sample-project.git
     branch: master
 
+- name: image-to-local-registry
+  type: docker-image
+  source:
+    repository: localhost:5000/debian
+
+- name: jessie-image
+  type: docker-image
+  source:
+    repository: debian
+    tag: jessie
+
 jobs:
-- name: hello-from-javascript
+- name: push-docker-image
+  plan:
+  - aggregate:
+    - get: sample-project
+    - get: jessie-image
+      params:
+        save: true
+  - put: image-to-local-registry
+    params:
+      load_base: jessie-image
+      build: sample-project/docker/test
+
+- name: hello-via-npm
   plan:
   - get: sample-project
     trigger: false
